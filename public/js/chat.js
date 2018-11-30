@@ -44,6 +44,19 @@ socket.on('newLocationMessage', function (message) {
   scrollToBottom();
 });
 
+socket.on('connect', function () {
+  var params = jQuery.deparam(window.location.object);
+
+  socket.emit('join', params, function (err) {
+    if (err) {
+      alert(err);
+      window.location.href = '/';
+    } else {
+      console.log('No error');
+    }
+  });
+});
+
 socket.on('disconnect', function () {
   console.log('Disconnected from server');
 });
