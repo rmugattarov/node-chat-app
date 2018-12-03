@@ -15,7 +15,9 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.4",
+    "lodash": "^4.17.11",
     "moment": "^2.22.2",
+    "save": "^2.3.3",
     "socket.io": "^2.1.1"
   },
   "devDependencies": {
